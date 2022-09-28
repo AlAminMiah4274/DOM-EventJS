@@ -20,7 +20,7 @@
         document.getElementById('delete-confirm').addEventListener('keyup', function (event) {
             const text = event.target.value;
             const deleteButton = document.getElementById('btn-delete');
-            if (text === 'delete' || text === 'Delete') {
+            if (text === 'delete') {
                 deleteButton.removeAttribute('disabled');
             }
             else {
