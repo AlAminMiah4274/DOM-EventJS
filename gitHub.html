@@ -13,6 +13,10 @@
     <input id="delete-confirm" type="text" placeholder="please type delete">
     <button id="btn-delete" disabled>Delete</button>
     <script>
+        document.getElementById('btn-delete').addEventListener('click', function () {
+            const secretInfo = document.getElementById('secret-info');
+            secretInfo.style.display = 'none';
+        })
         document.getElementById('delete-confirm').addEventListener('keyup', function (event) {
             const text = event.target.value;
             const deleteButton = document.getElementById('btn-delete');
@@ -22,10 +26,6 @@
             else {
                 deleteButton.setAttribute('disabled', true);
             }
-        })
-        document.getElementById('btn-delete').addEventListener('click', function () {
-            const secretInfo = document.getElementById('secret-info');
-            secretInfo.style.display = 'none';
         })
     </script>
 </body>
